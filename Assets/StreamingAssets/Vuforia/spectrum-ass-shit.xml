@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="NASA-Digital-Blueprint-Saturn-V-F-1-Engine-c-1" size="1.000000 1.500938" />
+    <ImageTarget name="NASA-Digital-Blueprint-Saturn-V-1-72-scale-c-5" size="1.000000 1.000000" />
+    <ImageTarget name="nasa-digital-blueprint-saturn-v-1-72-scale-4" size="1.000000 1.000000" />
+    <ImageTarget name="Lunar-Module-ass-shit" size="1.000000 0.778968" />
+  </Tracking>
+</QCARConfig>
