@@ -8,6 +8,7 @@ Confidential and Proprietary - Protected under copyright and other laws.
 
 using UnityEngine;
 using Vuforia;
+using System;
 
 /// <summary>
 ///     A custom handler that implements the ITrackableEventHandler interface.
@@ -16,6 +17,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 {
     #region PRIVATE_MEMBER_VARIABLES
 
+	protected Animator childAnimator;
     protected TrackableBehaviour mTrackableBehaviour;
 
     #endregion // PRIVATE_MEMBER_VARIABLES
@@ -27,6 +29,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
+
+		// Get the animator of the first child object
+		childAnimator = transform.GetChild(0).GetComponent<Animator>();
     }
 
     #endregion // UNTIY_MONOBEHAVIOUR_METHODS
@@ -46,6 +51,12 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+			try{
+			childAnimator.Play ("Startup");
+			}
+			catch (Exception) {
+			}
+
             OnTrackingFound();
         }
         else if (previousStatus == TrackableBehaviour.Status.TRACKED &&
