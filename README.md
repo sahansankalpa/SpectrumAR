@@ -1,6 +1,6 @@
 # SpectrumAR Augmented Reality Project
 
-This project was developed by [Chamuth Chamandana], [Sahan Sankalapa] and [Wikum Jayasanka] for the Science Day exhibition of Pinnawala Central College in 2018.
+This project was developed by [Chamuth Chamandana], [Sahan Sankalapa] and [Wikum Jayasanka] for the Science Day exhibition of Pinnawala Central College in 2018. 
 
 ## Table of Contents
 
